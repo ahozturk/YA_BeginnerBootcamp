@@ -61,13 +61,15 @@
 
         private void btnSignupVisible_Click(object sender, EventArgs e)
         {
-            label3.Visible = true;
-            label4.Visible = true;
-            label5.Visible = true;
-            txtPasswordSignup.Visible = true;
-            txtUsernameSignup.Visible = true;
-            txtPasswordVerifySignup.Visible = true;
-            btnSignup.Visible = true;
+            //label3.Visible = !label3.Visible;
+            //label4.Visible = !label4.Visible;
+            //label5.Visible = !label5.Visible;
+            //txtPasswordSignup.Visible = !txtPasswordSignup.Visible;
+            //txtUsernameSignup.Visible = !txtUsernameSignup.Visible;
+            //txtPasswordVerifySignup.Visible = !txtPasswordVerifySignup.Visible;
+            //btnSignup.Visible = !btnSignup.Visible;
+
+            panel1.Visible = !panel1.Visible;
         }
 
         private void btnSignup_Click(object sender, EventArgs e)
@@ -78,7 +80,7 @@
 
             if (passwordFromUser != passwordVerifyFromUser)
             {
-                MessageBox.Show("Passwords doesn't match!", "Fail",
+                MessageBox.Show("Passwords don't match!", "Fail",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
 

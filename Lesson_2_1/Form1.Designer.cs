@@ -44,6 +44,11 @@
             label5 = new Label();
             txtPasswordVerifySignup = new TextBox();
             btnSignup = new Button();
+            panel1 = new Panel();
+            label6 = new Label();
+            label7 = new Label();
+            button1 = new Button();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnLogin
@@ -92,6 +97,7 @@
             txtPassword.Font = new Font("Segoe UI", 12F);
             txtPassword.Location = new Point(53, 165);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(188, 29);
             txtPassword.TabIndex = 3;
             // 
@@ -146,89 +152,124 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16F);
-            label3.Location = new Point(569, 129);
+            label3.Location = new Point(73, 132);
             label3.Name = "label3";
             label3.Size = new Size(108, 30);
             label3.TabIndex = 12;
             label3.Text = "Password:";
-            label3.Visible = false;
             // 
             // txtPasswordSignup
             // 
             txtPasswordSignup.Font = new Font("Segoe UI", 12F);
-            txtPasswordSignup.Location = new Point(564, 165);
+            txtPasswordSignup.Location = new Point(68, 168);
             txtPasswordSignup.Name = "txtPasswordSignup";
+            txtPasswordSignup.PasswordChar = '*';
             txtPasswordSignup.Size = new Size(188, 29);
             txtPasswordSignup.TabIndex = 11;
-            txtPasswordSignup.Visible = false;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16F);
-            label4.Location = new Point(569, 46);
+            label4.Location = new Point(73, 49);
             label4.Name = "label4";
             label4.Size = new Size(116, 30);
             label4.TabIndex = 10;
             label4.Text = "Username:";
-            label4.Visible = false;
             // 
             // txtUsernameSignup
             // 
             txtUsernameSignup.Font = new Font("Segoe UI", 12F);
-            txtUsernameSignup.Location = new Point(564, 82);
+            txtUsernameSignup.Location = new Point(68, 85);
             txtUsernameSignup.Name = "txtUsernameSignup";
             txtUsernameSignup.Size = new Size(188, 29);
             txtUsernameSignup.TabIndex = 9;
-            txtUsernameSignup.Visible = false;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 16F);
-            label5.Location = new Point(569, 215);
+            label5.Location = new Point(73, 218);
             label5.Name = "label5";
             label5.Size = new Size(184, 30);
             label5.TabIndex = 14;
             label5.Text = "Password (Verify):";
-            label5.Visible = false;
             // 
             // txtPasswordVerifySignup
             // 
             txtPasswordVerifySignup.Font = new Font("Segoe UI", 12F);
-            txtPasswordVerifySignup.Location = new Point(564, 251);
+            txtPasswordVerifySignup.Location = new Point(68, 254);
             txtPasswordVerifySignup.Name = "txtPasswordVerifySignup";
+            txtPasswordVerifySignup.PasswordChar = '*';
             txtPasswordVerifySignup.Size = new Size(188, 29);
             txtPasswordVerifySignup.TabIndex = 13;
-            txtPasswordVerifySignup.Visible = false;
             // 
             // btnSignup
             // 
             btnSignup.BackColor = Color.MediumSeaGreen;
             btnSignup.Font = new Font("Segoe UI", 16F);
             btnSignup.ForeColor = Color.Cornsilk;
-            btnSignup.Location = new Point(564, 286);
+            btnSignup.Location = new Point(68, 289);
             btnSignup.Name = "btnSignup";
             btnSignup.Size = new Size(114, 39);
             btnSignup.TabIndex = 15;
             btnSignup.Text = "Sign Up";
             btnSignup.UseVisualStyleBackColor = false;
-            btnSignup.Visible = false;
             btnSignup.Click += btnSignup_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Coral;
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(txtUsernameSignup);
+            panel1.Controls.Add(btnSignup);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(txtPasswordSignup);
+            panel1.Controls.Add(txtPasswordVerifySignup);
+            panel1.Controls.Add(label3);
+            panel1.Location = new Point(523, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(663, 352);
+            panel1.TabIndex = 16;
+            panel1.Visible = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(493, 162);
+            label6.Name = "label6";
+            label6.Size = new Size(38, 15);
+            label6.TabIndex = 16;
+            label6.Text = "label6";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(377, 94);
+            label7.Name = "label7";
+            label7.Size = new Size(38, 15);
+            label7.TabIndex = 17;
+            label7.Text = "label7";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(485, 111);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 18;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Coral;
-            ClientSize = new Size(906, 376);
-            Controls.Add(btnSignup);
-            Controls.Add(label5);
-            Controls.Add(txtPasswordVerifySignup);
-            Controls.Add(label3);
-            Controls.Add(txtPasswordSignup);
-            Controls.Add(label4);
-            Controls.Add(txtUsernameSignup);
+            ClientSize = new Size(1227, 376);
+            Controls.Add(panel1);
             Controls.Add(btnSignupVisible);
             Controls.Add(rdbtnLoginEmail);
             Controls.Add(rdbtnLoginUsername);
@@ -240,6 +281,8 @@
             Controls.Add(btnLogin);
             Name = "Form1";
             Text = "Ultra Çok Güvenlikli Uygulama";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -262,5 +305,9 @@
         private Label label5;
         private TextBox txtPasswordVerifySignup;
         private Button btnSignup;
+        private Panel panel1;
+        private Button button1;
+        private Label label7;
+        private Label label6;
     }
 }
