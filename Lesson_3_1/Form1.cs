@@ -1,4 +1,4 @@
-namespace Lesson_3_1
+﻿namespace Lesson_3_1
 {
     public partial class Form1 : Form
     {
@@ -31,6 +31,15 @@ namespace Lesson_3_1
 
                 Thread.Sleep(100);
             }
+
+            if (pctrBoxHorse1.Location.X <= 0)
+                MessageBox.Show("At 1 Yarışı bitirdi! " + pctrBoxHorse1.Location.X);
+
+            if (pctrBoxHorse2.Location.X <= 0)
+                MessageBox.Show("At 2 Yarışı bitirdi! " + pctrBoxHorse2.Location.X);
+
+            if (pctrBoxHorse3.Location.X <= 0)
+                MessageBox.Show("At 3 Yarışı bitirdi! " + pctrBoxHorse3.Location.X);
         }
     }
 }
