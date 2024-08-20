@@ -95,5 +95,21 @@
 
             //users[usernameFromUser] = passwordFromUser;
         }
+
+        private void rdbtnLoginUsername_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbtnLoginUsername.Checked == true)
+            {
+                label1.Text = "Username:";
+            }
+        }
+
+        private void rdbtnLoginEmail_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbtnLoginEmail.Checked == true)
+            {
+                label1.Text = "Email:";
+            }
+        }
     }
 }

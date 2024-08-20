@@ -45,9 +45,6 @@
             txtPasswordVerifySignup = new TextBox();
             btnSignup = new Button();
             panel1 = new Panel();
-            label6 = new Label();
-            label7 = new Label();
-            button1 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -116,6 +113,7 @@
             // rdbtnLoginUsername
             // 
             rdbtnLoginUsername.AutoSize = true;
+            rdbtnLoginUsername.Checked = true;
             rdbtnLoginUsername.Location = new Point(264, 82);
             rdbtnLoginUsername.Name = "rdbtnLoginUsername";
             rdbtnLoginUsername.Size = new Size(128, 19);
@@ -123,6 +121,7 @@
             rdbtnLoginUsername.TabStop = true;
             rdbtnLoginUsername.Text = "Login w/ Username";
             rdbtnLoginUsername.UseVisualStyleBackColor = true;
+            rdbtnLoginUsername.CheckedChanged += rdbtnLoginUsername_CheckedChanged;
             // 
             // rdbtnLoginEmail
             // 
@@ -131,9 +130,9 @@
             rdbtnLoginEmail.Name = "rdbtnLoginEmail";
             rdbtnLoginEmail.Size = new Size(104, 19);
             rdbtnLoginEmail.TabIndex = 7;
-            rdbtnLoginEmail.TabStop = true;
             rdbtnLoginEmail.Text = "Login w/ Email";
             rdbtnLoginEmail.UseVisualStyleBackColor = true;
+            rdbtnLoginEmail.CheckedChanged += rdbtnLoginEmail_CheckedChanged;
             // 
             // btnSignupVisible
             // 
@@ -220,9 +219,6 @@
             // panel1
             // 
             panel1.BackColor = Color.Coral;
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label6);
             panel1.Controls.Add(txtUsernameSignup);
             panel1.Controls.Add(btnSignup);
             panel1.Controls.Add(label4);
@@ -232,43 +228,16 @@
             panel1.Controls.Add(label3);
             panel1.Location = new Point(523, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(663, 352);
+            panel1.Size = new Size(315, 352);
             panel1.TabIndex = 16;
             panel1.Visible = false;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(493, 162);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 15);
-            label6.TabIndex = 16;
-            label6.Text = "label6";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(377, 94);
-            label7.Name = "label7";
-            label7.Size = new Size(38, 15);
-            label7.TabIndex = 17;
-            label7.Text = "label7";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(485, 111);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 18;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Coral;
-            ClientSize = new Size(1227, 376);
+            ClientSize = new Size(856, 376);
             Controls.Add(panel1);
             Controls.Add(btnSignupVisible);
             Controls.Add(rdbtnLoginEmail);
@@ -306,8 +275,5 @@
         private TextBox txtPasswordVerifySignup;
         private Button btnSignup;
         private Panel panel1;
-        private Button button1;
-        private Label label7;
-        private Label label6;
     }
 }
