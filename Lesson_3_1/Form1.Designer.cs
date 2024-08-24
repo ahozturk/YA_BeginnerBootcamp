@@ -47,9 +47,14 @@
             textBox3 = new TextBox();
             label7 = new Label();
             textBox4 = new TextBox();
+            pctrBoxHorse4 = new PictureBox();
+            label8 = new Label();
+            label9 = new Label();
+            textBox5 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pctrBoxHorse1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pctrBoxHorse2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pctrBoxHorse3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pctrBoxHorse4).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -109,7 +114,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 16F);
-            button1.Location = new Point(28, 432);
+            button1.Location = new Point(34, 584);
             button1.Name = "button1";
             button1.Size = new Size(115, 71);
             button1.TabIndex = 6;
@@ -124,7 +129,7 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 16F);
-            button2.Location = new Point(158, 432);
+            button2.Location = new Point(164, 584);
             button2.Name = "button2";
             button2.Size = new Size(115, 71);
             button2.TabIndex = 7;
@@ -135,7 +140,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 16F);
-            textBox1.Location = new Point(471, 413);
+            textBox1.Location = new Point(477, 565);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 36);
             textBox1.TabIndex = 8;
@@ -144,7 +149,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 11F);
-            textBox2.Location = new Point(637, 452);
+            textBox2.Location = new Point(643, 604);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(122, 27);
             textBox2.TabIndex = 9;
@@ -154,7 +159,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16F);
-            label4.Location = new Point(288, 416);
+            label4.Location = new Point(294, 568);
             label4.Name = "label4";
             label4.Size = new Size(167, 30);
             label4.TabIndex = 10;
@@ -164,7 +169,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11F);
-            label5.Location = new Point(637, 432);
+            label5.Location = new Point(643, 584);
             label5.Name = "label5";
             label5.Size = new Size(63, 20);
             label5.TabIndex = 11;
@@ -174,7 +179,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11F);
-            label6.Location = new Point(800, 432);
+            label6.Location = new Point(775, 584);
             label6.Name = "label6";
             label6.Size = new Size(63, 20);
             label6.TabIndex = 13;
@@ -183,7 +188,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 11F);
-            textBox3.Location = new Point(800, 452);
+            textBox3.Location = new Point(775, 604);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(122, 27);
             textBox3.TabIndex = 12;
@@ -193,7 +198,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11F);
-            label7.Location = new Point(953, 432);
+            label7.Location = new Point(903, 584);
             label7.Name = "label7";
             label7.Size = new Size(63, 20);
             label7.TabIndex = 15;
@@ -202,18 +207,59 @@
             // textBox4
             // 
             textBox4.Font = new Font("Segoe UI", 11F);
-            textBox4.Location = new Point(953, 452);
+            textBox4.Location = new Point(903, 604);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(122, 27);
             textBox4.TabIndex = 14;
             textBox4.Text = "5000";
+            // 
+            // pctrBoxHorse4
+            // 
+            pctrBoxHorse4.Image = (Image)resources.GetObject("pctrBoxHorse4.Image");
+            pctrBoxHorse4.Location = new Point(1019, 391);
+            pctrBoxHorse4.Name = "pctrBoxHorse4";
+            pctrBoxHorse4.Size = new Size(175, 85);
+            pctrBoxHorse4.SizeMode = PictureBoxSizeMode.Zoom;
+            pctrBoxHorse4.TabIndex = 17;
+            pctrBoxHorse4.TabStop = false;
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.SeaShell;
+            label8.Location = new Point(-7, 493);
+            label8.Name = "label8";
+            label8.Size = new Size(1217, 16);
+            label8.TabIndex = 16;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 11F);
+            label9.Location = new Point(1031, 584);
+            label9.Name = "label9";
+            label9.Size = new Size(63, 20);
+            label9.TabIndex = 19;
+            label9.Text = "Horse 4:";
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 11F);
+            textBox5.Location = new Point(1031, 604);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(122, 27);
+            textBox5.TabIndex = 18;
+            textBox5.Text = "5000";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Tan;
-            ClientSize = new Size(1196, 557);
+            ClientSize = new Size(1196, 667);
+            Controls.Add(label9);
+            Controls.Add(textBox5);
+            Controls.Add(pctrBoxHorse4);
+            Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(textBox4);
             Controls.Add(label6);
@@ -235,6 +281,7 @@
             ((System.ComponentModel.ISupportInitialize)pctrBoxHorse1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pctrBoxHorse2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pctrBoxHorse3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pctrBoxHorse4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -258,5 +305,9 @@
         private TextBox textBox3;
         private Label label7;
         private TextBox textBox4;
+        private PictureBox pctrBoxHorse4;
+        private Label label8;
+        private Label label9;
+        private TextBox textBox5;
     }
 }

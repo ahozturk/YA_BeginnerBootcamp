@@ -10,35 +10,48 @@
         int horse1boost = 0;
         int horse2boost = 0;
         int horse3boost = 0;
+        int horse4boost = 0;
 
         private void button1_Click(object sender, EventArgs e)
         {
             int horse1Bet = Convert.ToInt32(textBox2.Text); //"15000"
             int horse2Bet = Convert.ToInt32(textBox3.Text); //"10000"
             int horse3Bet = Convert.ToInt32(textBox4.Text); //"5000"
+            int horse4Bet = Convert.ToInt32(textBox5.Text); //"5000"
 
             int boostLevel = 2;
 
-            if (horse1Bet < horse2Bet && horse1Bet < horse3Bet)
+            if (horse1Bet < horse2Bet && horse1Bet < horse3Bet && horse1Bet < horse4Bet)
             {
                 // At 1 en az bahise sahiptir
                 horse1boost = boostLevel;
                 horse2boost = 0;
                 horse3boost = 0;
+                horse4boost = 0;
             }
-            if (horse2Bet < horse1Bet && horse2Bet < horse3Bet)
+            if (horse2Bet < horse1Bet && horse2Bet < horse3Bet && horse2Bet < horse4Bet)
             {
                 // At 2 en az bahise sahiptir
                 horse2boost = boostLevel;
                 horse1boost = 0;
                 horse3boost = 0;
+                horse4boost = 0;
             }
-            if (horse3Bet < horse1Bet && horse3Bet < horse2Bet)
+            if (horse3Bet < horse1Bet && horse3Bet < horse2Bet && horse3Bet < horse4Bet)
             {
                 // At 3 en az bahise sahiptir
                 horse3boost = boostLevel;
                 horse1boost = 0;
                 horse2boost = 0;
+                horse4boost = 0;
+            }
+            if (horse4Bet < horse1Bet && horse4Bet < horse2Bet && horse4Bet < horse3Bet)
+            {
+                // At 3 en az bahise sahiptir
+                horse4boost = boostLevel;
+                horse1boost = 0;
+                horse2boost = 0;
+                horse3boost = 0;
             }
 
             timer1.Enabled = true;
@@ -54,6 +67,7 @@
             int horse1Step = random.Next(minStep + horse1boost, maxStep + horse1boost);
             int horse2Step = random.Next(minStep + horse2boost, maxStep + horse2boost);
             int horse3Step = random.Next(minStep + horse3boost, maxStep + horse3boost);
+            int horse4Step = random.Next(minStep + horse4boost, maxStep + horse4boost);
 
             if (pctrBoxHorse1.Location.X > 0)
             {
@@ -90,6 +104,18 @@
                 MessageBox.Show("At 3 Yarışı Bitirdi!");
                 return;
             }
+
+            if (pctrBoxHorse4.Location.X > 0)
+            {
+                pctrBoxHorse4.Location =
+                new Point(pctrBoxHorse4.Location.X - horse4Step, pctrBoxHorse4.Location.Y);
+            }
+            else
+            {
+                timer1.Enabled = false;
+                MessageBox.Show("At 4 Yarışı Bitirdi!");
+                return;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -97,6 +123,7 @@
             pctrBoxHorse1.Location = new Point(1019, 12);
             pctrBoxHorse2.Location = new Point(1019, 135);
             pctrBoxHorse3.Location = new Point(1019, 270);
+            pctrBoxHorse4.Location = new Point(1019, 391);
             timer1.Enabled = false;
         }
 
