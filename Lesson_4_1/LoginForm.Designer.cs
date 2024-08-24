@@ -1,6 +1,6 @@
 ﻿namespace Lesson_4_1
 {
-    partial class LoginPanel
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@
             txtPassword = new TextBox();
             label2 = new Label();
             label3 = new Label();
+            label4 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -70,6 +71,7 @@
             txtPassword.Font = new Font("Segoe UI", 14F);
             txtPassword.Location = new Point(172, 191);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(177, 32);
             txtPassword.TabIndex = 4;
             // 
@@ -93,20 +95,29 @@
             label3.TabIndex = 5;
             label3.Text = "Product Hunter App";
             // 
-            // LoginPanel
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(102, 343);
+            label4.Name = "label4";
+            label4.Size = new Size(0, 15);
+            label4.TabIndex = 6;
+            // 
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(432, 441);
+            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(txtPassword);
             Controls.Add(label2);
             Controls.Add(btnLogin);
             Controls.Add(txtEmail);
             Controls.Add(label1);
-            Name = "LoginPanel";
-            Text = "LoginPanel";
+            Name = "LoginForm";
+            Text = "LoginForm";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -119,5 +130,6 @@
         private TextBox txtPassword;
         private Label label2;
         private Label label3;
+        private Label label4;
     }
 }

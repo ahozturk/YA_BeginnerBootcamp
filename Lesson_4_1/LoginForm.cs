@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Lesson_4_1
 {
-    public partial class LoginPanel : Form
+    public partial class LoginForm : Form
     {
-        public LoginPanel()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -27,7 +27,9 @@ namespace Lesson_4_1
 
             if (email == correctEmail && password == correctPassword)
             {
-                MessageBox.Show("Login Success!");
+                HomeForm homeForm = new();
+                homeForm.Show();
+                this.Hide();
             }
             else
             {
