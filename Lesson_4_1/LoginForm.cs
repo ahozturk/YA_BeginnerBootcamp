@@ -17,15 +17,18 @@ namespace Lesson_4_1
             InitializeComponent();
         }
 
-        string correctEmail = "hakan@gmail.com";
-        string correctPassword = "sifre123";
+        Dictionary<string, string> users = new()
+        {
+            {"hakan@gmail.com", "sifre123" },
+            {"hakan123@gmail.com", "sifre123123" }
+        };
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text;
             string password = txtPassword.Text;
 
-            if (email == correctEmail && password == correctPassword)
+            if (users.ContainsKey(email) && users[email] == password)
             {
                 HomeForm homeForm = new();
                 homeForm.Show();
@@ -35,6 +38,9 @@ namespace Lesson_4_1
             {
                 MessageBox.Show("Error on Login!");
             }
+
+            //users["mehmet@gmail.com"] = "yenisifre";
+            //users.Add("mehmet@gmail.com", "yenisifre");
         }
     }
 }

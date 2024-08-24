@@ -35,6 +35,11 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            textBox1 = new TextBox();
+            label5 = new Label();
+            btnSignin = new Button();
+            textBox2 = new TextBox();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -103,12 +108,64 @@
             label4.Size = new Size(0, 15);
             label4.TabIndex = 6;
             // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 14F);
+            textBox1.Location = new Point(597, 191);
+            textBox1.Name = "textBox1";
+            textBox1.PasswordChar = '*';
+            textBox1.Size = new Size(177, 32);
+            textBox1.TabIndex = 11;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16F);
+            label5.Location = new Point(483, 191);
+            label5.Name = "label5";
+            label5.Size = new Size(108, 30);
+            label5.TabIndex = 10;
+            label5.Text = "Password:";
+            // 
+            // btnSignin
+            // 
+            btnSignin.Font = new Font("Segoe UI", 14F);
+            btnSignin.Location = new Point(483, 242);
+            btnSignin.Name = "btnSignin";
+            btnSignin.Size = new Size(108, 45);
+            btnSignin.TabIndex = 9;
+            btnSignin.Text = "SignIn";
+            btnSignin.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Segoe UI", 14F);
+            textBox2.Location = new Point(597, 153);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(177, 32);
+            textBox2.TabIndex = 8;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 16F);
+            label6.Location = new Point(483, 153);
+            label6.Name = "label6";
+            label6.Size = new Size(69, 30);
+            label6.TabIndex = 7;
+            label6.Text = "Email:";
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(432, 441);
+            ClientSize = new Size(859, 441);
+            Controls.Add(textBox1);
+            Controls.Add(label5);
+            Controls.Add(btnSignin);
+            Controls.Add(textBox2);
+            Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(txtPassword);
@@ -131,5 +188,10 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private TextBox textBox1;
+        private Label label5;
+        private Button btnSignin;
+        private TextBox textBox2;
+        private Label label6;
     }
 }
