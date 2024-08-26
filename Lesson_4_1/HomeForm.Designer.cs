@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnProductAdd = new Button();
-            button2 = new Button();
+            btnProductDelete = new Button();
             button3 = new Button();
             btnProductList = new Button();
             SuspendLayout();
@@ -45,15 +45,16 @@
             btnProductAdd.UseVisualStyleBackColor = true;
             btnProductAdd.Click += btnProductAdd_Click;
             // 
-            // button2
+            // btnProductDelete
             // 
-            button2.Font = new Font("Segoe UI", 16F);
-            button2.Location = new Point(58, 218);
-            button2.Name = "button2";
-            button2.Size = new Size(216, 57);
-            button2.TabIndex = 1;
-            button2.Text = "Ürün Sil";
-            button2.UseVisualStyleBackColor = true;
+            btnProductDelete.Font = new Font("Segoe UI", 16F);
+            btnProductDelete.Location = new Point(58, 218);
+            btnProductDelete.Name = "btnProductDelete";
+            btnProductDelete.Size = new Size(216, 57);
+            btnProductDelete.TabIndex = 1;
+            btnProductDelete.Text = "Ürün Sil";
+            btnProductDelete.UseVisualStyleBackColor = true;
+            btnProductDelete.Click += btnProductDelete_Click;
             // 
             // button3
             // 
@@ -84,7 +85,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btnProductList);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnProductDelete);
             Controls.Add(btnProductAdd);
             Name = "HomeForm";
             Text = "HomeForm";
@@ -94,7 +95,7 @@
         #endregion
 
         private Button btnProductAdd;
-        private Button button2;
+        private Button btnProductDelete;
         private Button button3;
         private Button btnProductList;
     }

@@ -1,6 +1,6 @@
 ﻿namespace Lesson_4_1
 {
-    partial class ProductListForm
+    partial class ProductDeleteForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,30 +33,30 @@
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
-            btnHomeReturn = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            label1.Location = new Point(98, 21);
+            label1.Location = new Point(82, 9);
             label1.Name = "label1";
-            label1.Size = new Size(197, 30);
-            label1.TabIndex = 0;
-            label1.Text = "Product List Form";
+            label1.Size = new Size(228, 30);
+            label1.TabIndex = 1;
+            label1.Text = "Product Delete Form";
             // 
             // listViewProducts
             // 
             listViewProducts.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
             listViewProducts.Font = new Font("Segoe UI", 12F);
             listViewProducts.FullRowSelect = true;
-            listViewProducts.Location = new Point(27, 73);
+            listViewProducts.Location = new Point(29, 78);
             listViewProducts.Name = "listViewProducts";
-            listViewProducts.Size = new Size(349, 292);
-            listViewProducts.TabIndex = 1;
+            listViewProducts.Size = new Size(356, 292);
+            listViewProducts.TabIndex = 2;
             listViewProducts.UseCompatibleStateImageBehavior = false;
             listViewProducts.View = View.Details;
+            listViewProducts.DoubleClick += listViewProducts_DoubleClick;
             // 
             // columnHeader1
             // 
@@ -73,29 +73,17 @@
             columnHeader3.Text = "Price";
             columnHeader3.Width = 100;
             // 
-            // btnHomeReturn
-            // 
-            btnHomeReturn.Font = new Font("Segoe UI", 13F);
-            btnHomeReturn.Location = new Point(302, 15);
-            btnHomeReturn.Name = "btnHomeReturn";
-            btnHomeReturn.Size = new Size(91, 46);
-            btnHomeReturn.TabIndex = 10;
-            btnHomeReturn.Text = "Home";
-            btnHomeReturn.UseVisualStyleBackColor = true;
-            btnHomeReturn.Click += btnHomeReturn_Click;
-            // 
-            // ProductListForm
+            // ProductDeleteForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(405, 450);
-            Controls.Add(btnHomeReturn);
+            ClientSize = new Size(397, 449);
             Controls.Add(listViewProducts);
             Controls.Add(label1);
-            Name = "ProductListForm";
-            Text = "ProductListForm";
-            Load += ProductListForm_Load;
+            Name = "ProductDeleteForm";
+            Text = "ProductDeleteForm";
+            Load += ProductDeleteForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -107,6 +95,5 @@
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
-        private Button btnHomeReturn;
     }
 }

@@ -27,5 +27,12 @@ namespace Lesson_4_1
             MessageBox.Show($"Title: {title}\nDesc.: {description}\nPrice: {price}");
             //MessageBox.Show(title + " " + description + " " + price);
         }
+
+        private void btnHomeReturn_Click(object sender, EventArgs e)
+        {
+            HomeForm homeForm = new();
+            homeForm.Show();
+            this.Hide();
+        }
     }
 }

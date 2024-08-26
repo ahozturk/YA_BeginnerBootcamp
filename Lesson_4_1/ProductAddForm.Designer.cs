@@ -36,6 +36,7 @@
             txtPrice = new TextBox();
             label4 = new Label();
             btnProductAdd = new Button();
+            btnHomeReturn = new Button();
             SuspendLayout();
             // 
             // label1
@@ -116,12 +117,24 @@
             btnProductAdd.UseVisualStyleBackColor = true;
             btnProductAdd.Click += btnProductAdd_Click;
             // 
+            // btnHomeReturn
+            // 
+            btnHomeReturn.Font = new Font("Segoe UI", 13F);
+            btnHomeReturn.Location = new Point(331, 12);
+            btnHomeReturn.Name = "btnHomeReturn";
+            btnHomeReturn.Size = new Size(91, 46);
+            btnHomeReturn.TabIndex = 9;
+            btnHomeReturn.Text = "Home";
+            btnHomeReturn.UseVisualStyleBackColor = true;
+            btnHomeReturn.Click += btnHomeReturn_Click;
+            // 
             // ProductAddForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(434, 450);
+            Controls.Add(btnHomeReturn);
             Controls.Add(btnProductAdd);
             Controls.Add(txtPrice);
             Controls.Add(label4);
@@ -146,5 +159,6 @@
         private TextBox txtPrice;
         private Label label4;
         private Button btnProductAdd;
+        private Button btnHomeReturn;
     }
 }

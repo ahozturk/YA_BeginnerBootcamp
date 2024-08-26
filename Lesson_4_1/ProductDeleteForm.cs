@@ -7,17 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Lesson_4_1
 {
-    public partial class ProductListForm : Form
+    public partial class ProductDeleteForm : Form
     {
-        public ProductListForm()
+        public ProductDeleteForm()
         {
             InitializeComponent();
         }
 
-        private void ProductListForm_Load(object sender, EventArgs e)
+        private void listViewProducts_DoubleClick(object sender, EventArgs e)
+        {
+            int index = listViewProducts.SelectedIndices[0];
+
+            listViewProducts.Items.RemoveAt(index);
+        }
+
+        private void ProductDeleteForm_Load(object sender, EventArgs e)
         {
             ListViewItem item1 = new();
             item1.Text = "Mouse";
@@ -50,13 +58,6 @@ namespace Lesson_4_1
             listViewProducts.Items.Add(item3);
             listViewProducts.Items.Add(item4);
             listViewProducts.Items.Add(item5);
-        }
-
-        private void btnHomeReturn_Click(object sender, EventArgs e)
-        {
-            HomeForm homeForm = new();
-            homeForm.Show();
-            this.Hide();
         }
     }
 }

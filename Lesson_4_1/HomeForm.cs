@@ -30,5 +30,12 @@ namespace Lesson_4_1
             productListForm.Show();
             this.Hide();
         }
+
+        private void btnProductDelete_Click(object sender, EventArgs e)
+        {
+            ProductDeleteForm productDeleteForm = new();
+            productDeleteForm.Show();
+            this.Hide();
+        }
     }
 }
