@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnProductAdd = new Button();
             button2 = new Button();
             button3 = new Button();
-            button4 = new Button();
+            btnProductList = new Button();
             SuspendLayout();
             // 
-            // button1
+            // btnProductAdd
             // 
-            button1.Font = new Font("Segoe UI", 16F);
-            button1.Location = new Point(58, 155);
-            button1.Name = "button1";
-            button1.Size = new Size(216, 57);
-            button1.TabIndex = 0;
-            button1.Text = "Ürün Ekle";
-            button1.UseVisualStyleBackColor = true;
+            btnProductAdd.Font = new Font("Segoe UI", 16F);
+            btnProductAdd.Location = new Point(58, 155);
+            btnProductAdd.Name = "btnProductAdd";
+            btnProductAdd.Size = new Size(216, 57);
+            btnProductAdd.TabIndex = 0;
+            btnProductAdd.Text = "Ürün Ekle";
+            btnProductAdd.UseVisualStyleBackColor = true;
+            btnProductAdd.Click += btnProductAdd_Click;
             // 
             // button2
             // 
@@ -64,15 +65,16 @@
             button3.Text = "Ürün Güncelle";
             button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnProductList
             // 
-            button4.Font = new Font("Segoe UI", 16F);
-            button4.Location = new Point(58, 92);
-            button4.Name = "button4";
-            button4.Size = new Size(216, 57);
-            button4.TabIndex = 3;
-            button4.Text = "Ürünleri Görüntüle";
-            button4.UseVisualStyleBackColor = true;
+            btnProductList.Font = new Font("Segoe UI", 16F);
+            btnProductList.Location = new Point(58, 92);
+            btnProductList.Name = "btnProductList";
+            btnProductList.Size = new Size(216, 57);
+            btnProductList.TabIndex = 3;
+            btnProductList.Text = "Ürünleri Görüntüle";
+            btnProductList.UseVisualStyleBackColor = true;
+            btnProductList.Click += btnProductList_Click;
             // 
             // HomeForm
             // 
@@ -80,10 +82,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(800, 450);
-            Controls.Add(button4);
+            Controls.Add(btnProductList);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnProductAdd);
             Name = "HomeForm";
             Text = "HomeForm";
             ResumeLayout(false);
@@ -91,9 +93,9 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnProductAdd;
         private Button button2;
         private Button button3;
-        private Button button4;
+        private Button btnProductList;
     }
 }

@@ -16,5 +16,19 @@ namespace Lesson_4_1
         {
             InitializeComponent();
         }
+
+        private void btnProductAdd_Click(object sender, EventArgs e)
+        {
+            ProductAddForm productAddForm = new();
+            productAddForm.Show();
+            this.Hide();
+        }
+
+        private void btnProductList_Click(object sender, EventArgs e)
+        {
+            ProductListForm productListForm = new();
+            productListForm.Show();
+            this.Hide();
+        }
     }
 }
