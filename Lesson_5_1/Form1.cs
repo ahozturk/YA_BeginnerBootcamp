@@ -56,11 +56,107 @@
 
             #region Example-1
 
-            string address = "Yeliz Sok.,Mehmetçik Mah.,Maltepe,İstanbul";
+            //string address = "Yeliz Sok.,Mehmetçik Mah.,Maltepe,İstanbul";
 
-            string street = address.Split(',')[2];
+            //string street = address.Split(',')[2];
 
-            label1.Text = street;
+            //label1.Text = street;
+
+            #endregion
+
+            #region Example-2
+
+            //string product1 = "Mouse,Lazer Tech,1000";
+
+            //string name1 = product1.Split(',')[0];
+            //string price1string = product1.Split(',')[2];
+
+            //double price1 = Convert.ToDouble(price1string);
+
+            //double price1AfterTaxes = price1 * 1.18;
+
+            //label1.Text = $"Name: {name1}, Price (Taxes included): {price1AfterTaxes}";
+
+            #endregion
+
+            #region ToLower, ToUpper
+
+            //string name = "Hakan"; //"haKan"
+
+            //label1.Text = name.ToUpper();
+            ////label1.Text = name.ToLower();
+
+            #endregion
+
+            #region Replace
+
+            //string text = "Lorem Ipsum, is simply, dummy text of the printing and typesetting industry. Lorem Ipsum buradan has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+
+            //label1.Text = text.Replace(",", ":::");
+
+            #endregion
+
+            #region Contains
+
+            //string text = "Lorem Ipsum, is simply, dummy text of the printing and typesetting industry. Lorem Ipsum buradan has been the industry's standard dummy text ever since the 1500s, when an unknown Hakan printer took a galley of type and scrambled it to make a type specimen book.";
+
+            //label1.Text = text.Contains("Hakan").ToString(); //true, false
+
+            #endregion
+
+            #region StartsWith, EndsWith
+
+            //string text = "Lorem Ipsum, is simply, the printing and typesetting industry.";
+
+            //label1.Text = text.StartsWith("Lorem Ipsum").ToString(); //true, false
+            //label1.Text = text.EndsWith("industry.").ToString(); //true, false
+
+            //string mail = "gorkem@gnail.com";
+
+            //label1.Text = mail.EndsWith("@gmail.com").ToString();
+
+            #endregion
+
+            #region Insert
+
+            //string text = "Lorem Ipsum, is simply, dummy text of the printing and typesetting industry.";
+
+            //string insertedText =  text.Insert(5, " Example");
+
+            //label1.Text = insertedText;
+
+            #endregion
+
+            #region Length
+
+            //string text = "Lorem Ipsum, is simply, the printing and typesetting industry.";
+
+            //int legthOfText = text.Length;
+
+            //label1.Text = legthOfText.ToString();
+
+            #endregion
+
+            #region Remove
+
+            //string text = "Lorem Ipsum, is simply, the printing and typesetting industry.";
+
+            //string newText = text.Remove(25, 10);
+
+            //label1.Text = newText;
+
+            #endregion
+
+            #region Remove
+
+            //string text = "   Lazer Tech  ";
+
+            //string newText = text.Trim();
+            ////string newText = text.TrimEnd();
+            ////string newText = text.TrimStart();
+
+
+            //label1.Text = $"-{newText}-";
 
             #endregion
         }
