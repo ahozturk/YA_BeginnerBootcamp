@@ -147,7 +147,7 @@
 
             #endregion
 
-            #region Remove
+            #region Trim
 
             //string text = "   Lazer Tech  ";
 
