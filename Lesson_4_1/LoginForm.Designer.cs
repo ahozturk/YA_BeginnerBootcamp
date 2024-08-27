@@ -35,10 +35,10 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
+            txtPasswordSignIn = new TextBox();
             label5 = new Label();
             btnSignin = new Button();
-            textBox2 = new TextBox();
+            txtEmailSignIn = new TextBox();
             label6 = new Label();
             SuspendLayout();
             // 
@@ -108,14 +108,14 @@
             label4.Size = new Size(0, 15);
             label4.TabIndex = 6;
             // 
-            // textBox1
+            // txtPasswordSignIn
             // 
-            textBox1.Font = new Font("Segoe UI", 14F);
-            textBox1.Location = new Point(597, 191);
-            textBox1.Name = "textBox1";
-            textBox1.PasswordChar = '*';
-            textBox1.Size = new Size(177, 32);
-            textBox1.TabIndex = 11;
+            txtPasswordSignIn.Font = new Font("Segoe UI", 14F);
+            txtPasswordSignIn.Location = new Point(597, 191);
+            txtPasswordSignIn.Name = "txtPasswordSignIn";
+            txtPasswordSignIn.PasswordChar = '*';
+            txtPasswordSignIn.Size = new Size(177, 32);
+            txtPasswordSignIn.TabIndex = 11;
             // 
             // label5
             // 
@@ -136,14 +136,15 @@
             btnSignin.TabIndex = 9;
             btnSignin.Text = "SignIn";
             btnSignin.UseVisualStyleBackColor = true;
+            btnSignin.Click += btnSignin_Click;
             // 
-            // textBox2
+            // txtEmailSignIn
             // 
-            textBox2.Font = new Font("Segoe UI", 14F);
-            textBox2.Location = new Point(597, 153);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(177, 32);
-            textBox2.TabIndex = 8;
+            txtEmailSignIn.Font = new Font("Segoe UI", 14F);
+            txtEmailSignIn.Location = new Point(597, 153);
+            txtEmailSignIn.Name = "txtEmailSignIn";
+            txtEmailSignIn.Size = new Size(177, 32);
+            txtEmailSignIn.TabIndex = 8;
             // 
             // label6
             // 
@@ -161,10 +162,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
             ClientSize = new Size(859, 441);
-            Controls.Add(textBox1);
+            Controls.Add(txtPasswordSignIn);
             Controls.Add(label5);
             Controls.Add(btnSignin);
-            Controls.Add(textBox2);
+            Controls.Add(txtEmailSignIn);
             Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -188,10 +189,10 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
+        private TextBox txtPasswordSignIn;
         private Label label5;
         private Button btnSignin;
-        private TextBox textBox2;
+        private TextBox txtEmailSignIn;
         private Label label6;
     }
 }

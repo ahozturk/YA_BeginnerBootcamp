@@ -42,5 +42,15 @@ namespace Lesson_4_1
             //users["mehmet@gmail.com"] = "yenisifre";
             //users.Add("mehmet@gmail.com", "yenisifre");
         }
+
+        private void btnSignin_Click(object sender, EventArgs e)
+        {
+            string email = txtEmailSignIn.Text;
+            string password = txtPasswordSignIn.Text;
+
+            users.Add(email, password);
+
+            MessageBox.Show("User added successfully!");
+        }
     }
 }
