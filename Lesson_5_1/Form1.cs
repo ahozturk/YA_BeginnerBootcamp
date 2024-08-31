@@ -10,6 +10,7 @@
         private void Form1_Load(object sender, EventArgs e)
         {
             #region Split
+            //"isim soyisim"
             //string fullname1 = "Hakan Öztürk"; //["Hakan", "Öztürk"]
             //string fullname2 = "Görkem Kemer"; //["Görkem", "Kemer"]
             //string fullname3 = "Merve Aydoğan"; //["Merve", "Aydoğan"]
@@ -27,11 +28,12 @@
 
             //string name1 = fullname1.Split(' ')[0];
 
-            //string lastname1 = fullname1.Split(' ')[1];
+            //string lastname1 = fullname1.Split(' ')[1]; //"Öztürk"
 
-            //string firstCharLastname = lastname1.Substring(0, 1);
+            //string firstCharLastname = lastname1.Substring(0, 1); //"Ö"
 
-            //label1.Text = $"{name1} - {firstCharLastname}";
+            //label1.Text = $"{name1} {firstCharLastname}";
+
             //label1.Text = name1 + " " + firstCharLastname;
 
             //string address = "Leyla Sokak Uğur Caddesi No: 14";
@@ -56,6 +58,8 @@
 
             #region Example-1
 
+            //"Sokak,Mahalle,İlçe,İl"
+
             //string address = "Yeliz Sok.,Mehmetçik Mah.,Maltepe,İstanbul";
 
             //string street = address.Split(',')[2];
@@ -66,16 +70,16 @@
 
             #region Example-2
 
-            //string product1 = "Mouse,Lazer Tech,1000";
+            string product1 = "Mouse,Lazer Tech,1000";
 
-            //string name1 = product1.Split(',')[0];
-            //string price1string = product1.Split(',')[2];
+            string name1 = product1.Split(',')[0];
+            string price1string = product1.Split(',')[2];
 
-            //double price1 = Convert.ToDouble(price1string);
+            double price1 = Convert.ToDouble(price1string);
 
-            //double price1AfterTaxes = price1 * 1.18;
+            double price1AfterTaxes = price1 * 1.18;
 
-            //label1.Text = $"Name: {name1}, Price (Taxes included): {price1AfterTaxes}";
+            label1.Text = $"Name: {name1}, Price (Taxes included): {price1AfterTaxes}";
 
             #endregion
 
@@ -159,6 +163,34 @@
             //label1.Text = $"-{newText}-";
 
             #endregion
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string input = txtInput.Text;
+            string[] words = input.Split(' ');
+
+            // Display the first three words (if available)
+            lblWord1.Text = words.Length > 0 ? words[0] : "";
+            lblWord2.Text = words.Length > 1 ? words[1] : "";
+            lblWord3.Text = words.Length > 2 ? words[2] : "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string input = txtInput.Text;
+            int startIndex = 0;
+            int length = 5;
+
+            if (input.Length >= startIndex + length)
+            {
+                string result = input.Substring(startIndex, length);
+                lblSubstring.Text = "Substring: " + result;
+            }
+            else
+            {
+                lblSubstring.Text = "Input too short!";
+            }
         }
     }
 }
