@@ -58,10 +58,10 @@
             rdnbtnTavuk.Font = new Font("Segoe UI", 16F);
             rdnbtnTavuk.Location = new Point(162, 99);
             rdnbtnTavuk.Name = "rdnbtnTavuk";
-            rdnbtnTavuk.Size = new Size(158, 34);
+            rdnbtnTavuk.Size = new Size(236, 34);
             rdnbtnTavuk.TabIndex = 1;
             rdnbtnTavuk.TabStop = true;
-            rdnbtnTavuk.Text = "Tavuk Burger";
+            rdnbtnTavuk.Text = "Tavuk Burger (100TL)";
             rdnbtnTavuk.UseVisualStyleBackColor = true;
             // 
             // rdnbtnEt
@@ -70,10 +70,10 @@
             rdnbtnEt.Font = new Font("Segoe UI", 16F);
             rdnbtnEt.Location = new Point(162, 134);
             rdnbtnEt.Name = "rdnbtnEt";
-            rdnbtnEt.Size = new Size(121, 34);
+            rdnbtnEt.Size = new Size(199, 34);
             rdnbtnEt.TabIndex = 2;
             rdnbtnEt.TabStop = true;
-            rdnbtnEt.Text = "Et Burger";
+            rdnbtnEt.Text = "Et Burger (150TL)";
             rdnbtnEt.UseVisualStyleBackColor = true;
             // 
             // label2

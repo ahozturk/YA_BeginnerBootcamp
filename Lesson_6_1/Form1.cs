@@ -1,3 +1,5 @@
+using Lesson_6_1.Models;
+
 namespace Lesson_6_1
 {
     public partial class Form1 : Form
@@ -9,20 +11,45 @@ namespace Lesson_6_1
 
         private void btnSiparis_Click(object sender, EventArgs e)
         {
-            string burgerTipi = "";
-            string soslar = "";
-            string adres = "";
+            Siparis siparis = new();
 
-            if (checkboxKetcap.Checked == true)
+            if (rdnbtnEt.Checked)
             {
-                soslar += "Ketçap\n";
+                siparis.BurgerTipi = "Et Burger";
+                siparis.Fiyat += 150;
             }
-            if (checkBoxMayonez.Checked == true)
+            
+            else if (rdnbtnTavuk.Checked)
             {
-                soslar += "Mayonez\n";
+                siparis.BurgerTipi = "Tavuk Burger";
+                siparis.Fiyat += 100;
             }
 
-            MessageBox.Show($"{burgerTipi}\n{soslar}\n{adres}");
+            if (checkboxKetcap.Checked)
+                siparis.Soslar += "Ketçap\n";
+            
+            if (checkBoxMayonez.Checked)
+                siparis.Soslar += "Mayonez\n";
+            
+            if (checkBoxRanch.Checked)
+            {
+                siparis.Soslar += "Ranch\n";
+                siparis.Fiyat += 3;
+            }
+            
+            if (checkBoxBbq.Checked)
+            {
+                siparis.Soslar += "Barbekü\n";
+                siparis.Fiyat += 3;
+            }
+
+            siparis.Adres = txtAdres.Text;
+
+            siparis.ZamanDamgasi = DateTime.Now.ToString();
+
+            //MessageBox.Show($"Burger Tipi: {siparis.BurgerTipi}\n\nSoslar:\n{siparis.Soslar}\nAdres: {siparis.Adres}\n\nFiyat: {siparis.Fiyat}\n\nTarih: {siparis.ZamanDamgasi}");
+
+            MessageBox.Show(siparis.ToString());
         }
     }
 }
