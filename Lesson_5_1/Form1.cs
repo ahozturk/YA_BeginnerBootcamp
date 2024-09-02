@@ -48,7 +48,7 @@
 
             //string text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum buradan has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
 
-            //int index = text.IndexOf("buradan");
+            //int index = text.IndexOf("simply");
 
             //string textAfterSpecifiedWord = text.Substring(index);
 
@@ -70,16 +70,16 @@
 
             #region Example-2
 
-            string product1 = "Mouse,Lazer Tech,1000";
+            //string product1 = "Mouse,Lazer Tech,1000";
 
-            string name1 = product1.Split(',')[0];
-            string price1string = product1.Split(',')[2];
+            //string name1 = product1.Split(',')[0];
+            //string price1string = product1.Split(',')[2];
 
-            double price1 = Convert.ToDouble(price1string);
+            //double price1 = Convert.ToDouble(price1string);
 
-            double price1AfterTaxes = price1 * 1.18;
+            //double price1AfterTaxes = price1 * 1.18;
 
-            label1.Text = $"Name: {name1}, Price (Taxes included): {price1AfterTaxes}";
+            //label1.Text = $"Name: {name1}, Price (Taxes included): {price1AfterTaxes}";
 
             #endregion
 
@@ -87,8 +87,11 @@
 
             //string name = "Hakan"; //"haKan"
 
-            //label1.Text = name.ToUpper();
-            ////label1.Text = name.ToLower();
+            ////"HAKAn".ToLower() -> "hakan"
+            ////"hakan".ToLower() -> "hakan"
+
+            ////label1.Text = name.ToUpper();
+            //label1.Text = name.ToLower();
 
             #endregion
 
@@ -96,15 +99,17 @@
 
             //string text = "Lorem Ipsum, is simply, dummy text of the printing and typesetting industry. Lorem Ipsum buradan has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
 
-            //label1.Text = text.Replace(",", ":::");
+            //label1.Text = text.Replace(" ", "").Length.ToString();
 
             #endregion
 
             #region Contains
 
-            //string text = "Lorem Ipsum, is simply, dummy text of the printing and typesetting industry. Lorem Ipsum buradan has been the industry's standard dummy text ever since the 1500s, when an unknown Hakan printer took a galley of type and scrambled it to make a type specimen book.";
+            string text = "Lorem Ipsum, is simply, dummy text of the printing and typesetting industry. Lorem Ipsum buradan has been the industry's standard dummy text ever since the 1500s, when an unknown Hakan printer took a galley of type and scrambled it to make a type specimen book.";
 
-            //label1.Text = text.Contains("Hakan").ToString(); //true, false
+            label1.Text = text.Contains("Hakan").ToString(); //true, false
+            //label1.Text = (text.IndexOf("Hakan") >= 0).ToString(); //true, false
+
 
             #endregion
 
