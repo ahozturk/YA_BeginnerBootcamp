@@ -40,6 +40,15 @@
             label4 = new Label();
             txtAdres = new TextBox();
             btnSiparis = new Button();
+            label5 = new Label();
+            radioButtonKrediKarti = new RadioButton();
+            radioButtonNakit = new RadioButton();
+            radioButtonMultinet = new RadioButton();
+            radioButtonMetropol = new RadioButton();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -56,7 +65,7 @@
             // 
             rdnbtnTavuk.AutoSize = true;
             rdnbtnTavuk.Font = new Font("Segoe UI", 16F);
-            rdnbtnTavuk.Location = new Point(162, 99);
+            rdnbtnTavuk.Location = new Point(16, 6);
             rdnbtnTavuk.Name = "rdnbtnTavuk";
             rdnbtnTavuk.Size = new Size(236, 34);
             rdnbtnTavuk.TabIndex = 1;
@@ -68,7 +77,7 @@
             // 
             rdnbtnEt.AutoSize = true;
             rdnbtnEt.Font = new Font("Segoe UI", 16F);
-            rdnbtnEt.Location = new Point(162, 134);
+            rdnbtnEt.Location = new Point(16, 41);
             rdnbtnEt.Name = "rdnbtnEt";
             rdnbtnEt.Size = new Size(199, 34);
             rdnbtnEt.TabIndex = 2;
@@ -164,7 +173,7 @@
             btnSiparis.FlatStyle = FlatStyle.Flat;
             btnSiparis.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             btnSiparis.ForeColor = Color.Cornsilk;
-            btnSiparis.Location = new Point(572, 316);
+            btnSiparis.Location = new Point(572, 521);
             btnSiparis.Name = "btnSiparis";
             btnSiparis.Size = new Size(144, 50);
             btnSiparis.TabIndex = 11;
@@ -172,12 +181,93 @@
             btnSiparis.UseVisualStyleBackColor = false;
             btnSiparis.Click += btnSiparis_Click;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16F);
+            label5.Location = new Point(56, 412);
+            label5.Name = "label5";
+            label5.Size = new Size(91, 30);
+            label5.TabIndex = 14;
+            label5.Text = "Ödeme:";
+            // 
+            // radioButtonKrediKarti
+            // 
+            radioButtonKrediKarti.AutoSize = true;
+            radioButtonKrediKarti.Font = new Font("Segoe UI", 16F);
+            radioButtonKrediKarti.Location = new Point(5, 42);
+            radioButtonKrediKarti.Name = "radioButtonKrediKarti";
+            radioButtonKrediKarti.Size = new Size(132, 34);
+            radioButtonKrediKarti.TabIndex = 13;
+            radioButtonKrediKarti.TabStop = true;
+            radioButtonKrediKarti.Text = "Kredi Kartı";
+            radioButtonKrediKarti.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNakit
+            // 
+            radioButtonNakit.AutoSize = true;
+            radioButtonNakit.Font = new Font("Segoe UI", 16F);
+            radioButtonNakit.Location = new Point(5, 5);
+            radioButtonNakit.Name = "radioButtonNakit";
+            radioButtonNakit.Size = new Size(153, 34);
+            radioButtonNakit.TabIndex = 12;
+            radioButtonNakit.TabStop = true;
+            radioButtonNakit.Text = "Kapıda Nakit";
+            radioButtonNakit.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMultinet
+            // 
+            radioButtonMultinet.AutoSize = true;
+            radioButtonMultinet.Font = new Font("Segoe UI", 16F);
+            radioButtonMultinet.Location = new Point(5, 82);
+            radioButtonMultinet.Name = "radioButtonMultinet";
+            radioButtonMultinet.Size = new Size(111, 34);
+            radioButtonMultinet.TabIndex = 15;
+            radioButtonMultinet.TabStop = true;
+            radioButtonMultinet.Text = "Multinet";
+            radioButtonMultinet.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMetropol
+            // 
+            radioButtonMetropol.AutoSize = true;
+            radioButtonMetropol.Font = new Font("Segoe UI", 16F);
+            radioButtonMetropol.Location = new Point(5, 122);
+            radioButtonMetropol.Name = "radioButtonMetropol";
+            radioButtonMetropol.Size = new Size(122, 34);
+            radioButtonMetropol.TabIndex = 16;
+            radioButtonMetropol.TabStop = true;
+            radioButtonMetropol.Text = "Metropol";
+            radioButtonMetropol.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(rdnbtnTavuk);
+            panel1.Controls.Add(rdnbtnEt);
+            panel1.Location = new Point(155, 99);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(254, 81);
+            panel1.TabIndex = 17;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(radioButtonKrediKarti);
+            panel2.Controls.Add(radioButtonNakit);
+            panel2.Controls.Add(radioButtonMetropol);
+            panel2.Controls.Add(radioButtonMultinet);
+            panel2.Location = new Point(155, 422);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(186, 177);
+            panel2.TabIndex = 18;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Cornsilk;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 611);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(label5);
             Controls.Add(btnSiparis);
             Controls.Add(txtAdres);
             Controls.Add(label4);
@@ -187,11 +277,13 @@
             Controls.Add(checkBoxRanch);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(rdnbtnEt);
-            Controls.Add(rdnbtnTavuk);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Fast Corner";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -210,5 +302,12 @@
         private Label label4;
         private TextBox txtAdres;
         private Button btnSiparis;
+        private Label label5;
+        private RadioButton radioButtonKrediKarti;
+        private RadioButton radioButtonNakit;
+        private RadioButton radioButtonMultinet;
+        private RadioButton radioButtonMetropol;
+        private Panel panel1;
+        private Panel panel2;
     }
 }
