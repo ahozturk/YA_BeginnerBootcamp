@@ -1,0 +1,11 @@
+﻿id,name,surname,birthyear
+1,John,Doe,1990
+2,Jane,Smith,1985
+3,Emily,Jones,2000
+4,Michael,Brown,1978
+5,Sarah,Davis,1992
+6,David,Wilson,1988
+7,Linda,Johnson,1995
+8,Robert,White,1982
+9,Patricia,Moore,1993
+10,Charles,Thompson,1975
