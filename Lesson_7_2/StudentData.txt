@@ -1,0 +1,11 @@
+﻿id,name,surname,exam1,exam2
+1,John,Doe,85,78
+2,Jane,Smith,92,88
+3,Emily,Jones,76,84
+4,Michael,Brown,89,90
+5,Sarah,Davis,95,91
+6,David,Wilson,80,73
+7,Linda,Johnson,88,87
+8,Robert,White,72,75
+9,Patricia,Moore,93,89
+10,Charles,Thompson,81,77
