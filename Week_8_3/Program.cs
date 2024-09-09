@@ -19,12 +19,18 @@
 
 List<string> names = new();
 
-names.Add("Hakan");
-names.Add("Mehmet");
-names.Add("Uğur");
-names.Add("Tolga");
+Console.WriteLine("Please enter a name:");
+string name = Console.ReadLine();
+
+names.Add(name);
 
 for (int i = 0; i < names.Count; i++)
 {
     Console.WriteLine(names[i]);
 }
+
+//1-Hakan
+//2-Huriye
+//3-Fatih
+//4-Furkan
+//5-Merve
