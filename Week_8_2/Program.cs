@@ -23,7 +23,7 @@ double GetPi()
 }
 
 double r = 3;
-double calculation = 3 * 2 * GetPi();
+double calculation = r * 2 * GetPi(); //r*2*pi
 
 //Parametre alan, geri değer döndürmeyen
 void WriteMenuWithName(string name)
@@ -39,3 +39,12 @@ void WriteMenuWithName(string name)
 WriteMenuWithName("Merve");
 
 //Parametre alan, geri değer döndüren
+
+double CalculateArea(double r)
+{
+    double calculation = r * 2 * GetPi();
+    Console.WriteLine($"Raw Calcualtion:{calculation}");
+    return Math.Round(calculation, 1);
+}
+
+Console.WriteLine(CalculateArea(7));
