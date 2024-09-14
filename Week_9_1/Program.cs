@@ -85,9 +85,21 @@ void SeparateLines()
 
 string TakeInputFromUser(string message)
 {
-    Console.WriteLine(message);
-    Console.Write("user: ");
-    string input = Console.ReadLine();
+    string input;
+
+    while (true)
+    {
+        Console.WriteLine(message);
+        Console.Write("user: ");
+        input = Console.ReadLine(); //"     "
+
+        if (!string.IsNullOrWhiteSpace(input)) //"", " ", string.Empty, null
+        {
+            break;
+        }
+
+        Console.WriteLine("Invalid Input:");
+    }
 
     return input;
 }
