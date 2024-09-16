@@ -36,17 +36,22 @@ car2.Color = "Red";
 car2.Price = 20000;
 
 Car car3 = new();
-car3.Brand = "Ford";
-car3.Model = "Fusion";
-car3.Year = "2018";
-car3.Plate = "DEF123";
-car3.Color = "Blue";
-car3.Price = 15000;
+// car3.Brand = "Ford";
+// car3.Model = "Fusion";
+// car3.Year = "2018";
+// car3.Plate = "DEF123";
+// car3.Color = "Blue";
+// car3.Price = 15000;
+car3.SetCarProperties("Ford", "Fusion", "2018", "Blue", 15000, "DEF123");
+
+Car car4 = new();
+car4.SetCarProperties("Chevrolet", "Malibu", "2017", "White", 18000, "GHI123");
 
 List<Car> cars = new();
 cars.Add(car1);
 cars.Add(car2);
 cars.Add(car3);
+cars.Add(car4);
 
 for(int i = 0; i < cars.Count; i++)
 {
@@ -64,4 +69,14 @@ class Car
     public string Color { get; set; }
     public decimal Price { get; set; }
     public string Plate { get; set; }
+
+    public void SetCarProperties(string brand, string model, string year, string color, decimal price, string plate)
+    {
+        Brand = brand;
+        Model = model;
+        Year = year;
+        Color = color;
+        Price = price;
+        Plate = plate;
+    }
 }
