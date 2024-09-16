@@ -1,44 +1,47 @@
 ﻿// Console.WriteLine("Hello, World!");
 
 // string car1 = "Toyota";
-// string car1model = "Camry";
-// string car1year = "2020";
+// string car1Model = "Camry";
+// string car1Year = "2020";
 // string car1license = "ABC123";
 
 // string car2 = "Honda";
-// string car2model = "Civic";
-// string car2year = "2019";
-// string car2color = "Red";
+// string car2Model = "Civic";
+// string car2Year = "2019";
+// string car2Color = "Red";
 
 // string car3 = "Ford";
-// string car3model = "Fusion";
-// string car3year = "2018";
+// string car3Model = "Fusion";
+// string car3Year = "2018";
 // string car3price = "20000";
 
-// System.Console.WriteLine($"Car 1 color: {car1license}");
-// System.Console.WriteLine($"Car 2 color: {car2color}");
-// System.Console.WriteLine($"Car 3 color: {car3price}");
+// System.Console.WriteLine($"Car 1 Color: {car1license}");
+// System.Console.WriteLine($"Car 2 Color: {car2Color}");
+// System.Console.WriteLine($"Car 3 Color: {car3price}");
 
 Car car1 = new();
-car1.brand = "Toyota";
-car1.model = "Camry";
-car1.year = "2020";
-car1.plate = "ABC123";
-car1.color = "Black";
+car1.Brand = "Toyota";
+car1.Model = "Camry";
+car1.Year = "2020";
+car1.Plate = "ABC123";
+car1.Color = "Black";
+car1.Price = 25000;
 
 Car car2 = new();
-car2.brand = "Honda";
-car2.model = "Civic";
-car2.year = "2019";
-car2.plate = "XYZ123";
-car2.color = "Red";
+car2.Brand = "Honda";
+car2.Model = "Civic";
+car2.Year = "2019";
+car2.Plate = "XYZ123";
+car2.Color = "Red";
+car2.Price = 20000;
 
 Car car3 = new();
-car3.brand = "Ford";
-car3.model = "Fusion";
-car3.year = "2018";
-car3.plate = "DEF123";
-car3.color = "Blue";
+car3.Brand = "Ford";
+car3.Model = "Fusion";
+car3.Year = "2018";
+car3.Plate = "DEF123";
+car3.Color = "Blue";
+car3.Price = 15000;
 
 List<Car> cars = new();
 cars.Add(car1);
@@ -47,15 +50,18 @@ cars.Add(car3);
 
 for(int i = 0; i < cars.Count; i++)
 {
-    Console.WriteLine($"Car {i + 1} brand: {cars[i].brand}, model: {cars[i].model}, year: {cars[i].year}, plate: {cars[i].plate}, color: {cars[i].color}");
+    if (cars[i].Price < 22000)
+    {
+        Console.WriteLine($"Car {i + 1} Brand: {cars[i].Brand}, Model: {cars[i].Model}, Year: {cars[i].Year}, Plate: {cars[i].Plate}, Color: {cars[i].Color} Price: {cars[i].Price}");
+    }
 }
 
 class Car
 {
-    public string brand;
-    public string model;
-    public string year;
-    public string color;
-    public string price;
-    public string plate;
+    public string Brand { get; set; }
+    public string Model { get; set; }
+    public string Year { get; set; }
+    public string Color { get; set; }
+    public decimal Price { get; set; }
+    public string Plate { get; set; }
 }
